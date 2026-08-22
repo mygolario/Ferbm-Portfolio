@@ -1,0 +1,15 @@
+node_modules
+.next
+out
+.DS_Store
+*.log
+.env*
+_preview_convert
+_video_frames
+.vercel
+next-env.d.ts
+tsconfig.tsbuildinfo
+__pycache__/
+*.pyc
+Retouch needed images/
+Scrolly-Storytelling-Hero section/

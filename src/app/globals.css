@@ -1,0 +1,101 @@
+@import "tailwindcss";
+
+:root {
+  --ivory: #f3ece1;
+  --bone: #e7dccb;
+  --clay: #c4a07a;
+  --amber: #9a6233;
+  --teal: #1d5c62;
+  --ink: #14110e;
+  --smoke: #2a241e;
+  --mist: rgba(243, 236, 225, 0.72);
+}
+
+@theme inline {
+  --color-ivory: var(--ivory);
+  --color-bone: var(--bone);
+  --color-clay: var(--clay);
+  --color-amber: var(--amber);
+  --color-teal: var(--teal);
+  --color-ink: var(--ink);
+  --color-smoke: var(--smoke);
+  --font-display: var(--font-display);
+  --font-sans: var(--font-sans);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  background: var(--ink);
+  color: var(--ivory);
+  font-family: var(--font-sans), system-ui, sans-serif;
+}
+
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+body {
+  margin: 0;
+  overflow-x: hidden;
+}
+
+::selection {
+  background: var(--teal);
+  color: var(--ivory);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font-family: inherit;
+}
+
+.display {
+  font-family: var(--font-display), Georgia, serif;
+  font-optical-sizing: auto;
+  font-variation-settings: "SOFT" 40, "WONK" 0.8;
+}
+
+.grain {
+  pointer-events: none;
+  position: fixed;
+  inset: 0;
+  z-index: 80;
+  opacity: 0.09;
+  mix-blend-mode: overlay;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+.chapter-line {
+  overflow: hidden;
+}
+
+.chapter-line span {
+  display: block;
+}
+
+.work-card img {
+  transition: transform 1.4s cubic-bezier(0.22, 1, 0.36, 1), filter 0.8s ease;
+}
+
+.work-card:hover img {
+  transform: scale(1.06);
+  filter: contrast(1.06) saturate(1.08);
+}
